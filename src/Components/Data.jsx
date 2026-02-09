@@ -93,26 +93,39 @@ export const freqClassNotOpaq = {
 export const categories = ["backend", "frontend", "tools", "platforms", "softskills"];
 
 export const projects = [
-    {name: "Paxel", Skills: ["Qt / QtCreator", "Git", "C++ Connector", "C++", "Bash", "CMake", "SQL"],
+    {name: "Paxel", Skills: ["Qt / QtCreator", "Git", "MySQL Connector/C++", "C++", "Bash", "CMake", "SQL", "Interpersonal Communication", "Problem Solving", "Teamwork", "Learning New Tools"],
         projectDescription: "A reddit inspired casual board discussion app for college students"},
-    {name: "Sokoban Algorithims", Skills: ["C++", "AStar", "BFS", "DFS", "LinkedList"],
+
+    {name: "Sokoban Algorithims", Skills: ["C++", "A* Search", "BFS", "DFS", "LinkedList", "Critical Thinking", "Problem Solving"],
         projectDescription: "Based on Sokoban, this project uses algorithims like bfs, dfs, astar to solve the game and return the map states it took"},
-    {name: "Website Portfolio", Skills: ["Json", "Node.js (Express)", "HTML", "CSS", "React", "Tailwind", "Git", "React-Three"],
+
+    {name: "Website Portfolio", Skills: ["JSON", "Node.js (Express)", "HTML", "CSS", "React", "Tailwind", "Git", "React Three Fiber", "Learning New Tools"],
         projectDescription: "This project is meant to allow a wider audience to see my skills and learn about me"},
-    {name: "Food Crawler", Skills: ["WinForms", "C#"],
+
+    {name: "Food Crawler", Skills: ["WinForms", "C#", "Interpersonal Communication", "Problem Solving", "Empathy", "Patience & Persistence"],
         projectDescription: "A School group project where you go through a ever expanding dungeon with different enemies and music based on current fight to level up and defeat the boss"},
+
     {name: "VS Code Utils", Skills: ["VSCode", "Make", "Bash"],
         projectDescription: "This project allows me to build C# pointing the build bin to the visual studios compiler to be able to use runtime DLLS and also build C++ projects on VS code rather than an IDE", },
+
     {name: "C Sharp TicTacToe", Skills: ["WinForms", "C#"], 
         projectDescription: "This project was a Graphical User Interface version of TicTacToe"},
+
     {name: "Arduino Weather Station", Skills: ["Arduino"], 
         projectDescription: "This project was my final in Eng 110 which uses a greedy cup cup that fills up and every 10 seconds it calculates rainfall per minutes"},
+
     {name: "Arduino IR Communication Towers", Skills: ["Arduino"], 
         projectDescription: "This project would rotate the arduino towers until it found a signal then turn until the signal was clear and then the two towers could communicate via keyboard typing to eachother"},
-    {name: "Json Array String Check Wiper", Skills: ["C++", "Json"], 
+
+    {name: "Arduino Solar Battery", Skills: ["Arduino", "Python"], 
+        projectDescription: "This project would rotate the arduino towers until it found a signal then turn until the signal was clear and then the two towers could communicate via keyboard typing to eachother"},
+
+    {name: "Json Array String Check Wiper", Skills: ["C++", "JSON"], 
         projectDescription: "This project which mainly is used for minecraft crafting json takes a input string and wipe anything that does not pass and also a KV pair checker which also wipes non passes from the file"},
+
     {name: "Black Jack", Skills: ["C++"],
         projectDescription: "Play some terminal Black Jack"},
+
     // {name: "", Skills: [],
     //     projectDescription: ""},
 ];

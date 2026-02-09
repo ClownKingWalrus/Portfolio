@@ -9,6 +9,8 @@ export const AboutMe = ({onClose}) => {
             </button>
             <div className="scrollable-container flex flex-col gap-5 pb-24">
 
+                {/* Below Each item is a Banner with 2 img on the left and right with a infomational in the middle */}
+
                 <div className="w-screen flex flex-row gap-0.5">
                     <img src="public/AztecGizmo.jpg" alt="My Cat :)" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
                     <div className="cardCanvas bg-amber-300/90 w-full flex flex-col items-center">

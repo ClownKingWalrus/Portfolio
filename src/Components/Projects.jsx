@@ -1,18 +1,30 @@
+import { useState } from "react";
 import { skills, freqClassNotOpaq, freqOrder, categoryOrder, projects } from "../Components/Data";
+
+export const Projects = ({onClose}) => {
+const [openProject, setOpenProject] = useState(null);
+
+function ExpandProject(project) {
+    setOpenProject((prev) => (prev === project.name ? null : project.name));
+}
 
 function ProjectGenerator() {
     return (
         projects.map((projects) =>
-        <div className="flex flex-col items-center cardCanvas bg-card/50 mt-6 "> 
-            <button className="card-hover bg-blue-500 rounded-4xl px-4 py-2">
+        <div key={projects.name} className={`flex flex-col items-center cardCanvas bg-card/50 mt-6 w-full`}> 
+            <button onClick={() => ExpandProject(projects)} className="card-hover bg-blue-500 rounded-4xl px-4 py-2 w-[calc(50%-1rem)]">
                 {projects.name}
             </button>
-            <p className="mt-4">
-                {projects.projectDescription}
-            </p>
-            <div className="flex flex-row gap-4">
-                <SkillCard skillArr={projects.Skills}/>
-            </div>
+            {openProject === projects.name && (
+                <div className="flex flex-col items-center">
+                    <p className="mt-4">
+                        {projects.projectDescription}
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4">
+                        <SkillCard skillArr={projects.Skills}/>
+                    </div>
+                </div>
+            )}
         </div>
         )
     );
@@ -32,7 +44,6 @@ function SkillCard({skillArr = []}) { // the = [] is not nessesary but forces th
     );
 }
 
-export const Projects = ({onClose}) => {
     return (
         // Screen dimmer is the main div //
         <div className="fixed inset-0 bg-black opacity-99 z-2">
@@ -41,10 +52,9 @@ export const Projects = ({onClose}) => {
                 CLOSER
             </button>
             {/* Put projects below */}
-            <div className="h-screen overflow-y-auto">
-                <div className="w-screen text-xl flex flex-col mt-2 pb-24 items-center">
+            <div className="h-screen overflow-y-auto flex flex-col items-center">
+                <div className={`w-[calc(60%-1rem)] text-xl flex flex-col mt-2 pb-24 items-center gap-10`}>
                     {ProjectGenerator()}
-                    
                 </div>
             </div>
         </div>
