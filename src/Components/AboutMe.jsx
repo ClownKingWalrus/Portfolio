@@ -1,6 +1,6 @@
 import { AboutMe1, AboutMe2, AboutMe3, AboutMe4 } from "./Data"
-const maxWidth=100
-const maxHeight=100
+const maxWidth=`[calc(20%)]`; //not sure why this does not work in as w-${maxWidth} ????
+const maxHeight=`[calc(50%)]`;
 export const AboutMe = ({onClose}) => {
     return (
         <div className="fixed inset-0 bg-black opacity-99 z-2">
@@ -12,7 +12,7 @@ export const AboutMe = ({onClose}) => {
                 {/* Below Each item is a Banner with 2 img on the left and right with a infomational in the middle */}
 
                 <div className="w-screen flex flex-row gap-0.5">
-                    <img src="public/AztecGizmo.jpg" alt="My Cat :)" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
+                    <img src="public/AztecGizmo.jpg" alt="My Cat :)" className={`block h-[calc(100%)] w-[calc(20%)] object-cover overflow-hidden rounded-2xl`}/>
                     <div className="cardCanvas bg-amber-300/90 w-full flex flex-col items-center">
                         <h1 className={`text-4xl text-white cardCanvas card-hover rounded-xl text-center h-fit w-[calc(90%-1rem)]`}>
                             About Me
@@ -21,11 +21,11 @@ export const AboutMe = ({onClose}) => {
                             {`${AboutMe1}`}
                         </p>
                     </div>
-                    <img src="public/SNHU-LearningCenter.webp" alt="My Cat :)" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
+                    <img src="public/SNHU-LearningCenter.webp" alt="My Cat :)" className={`block h-[calc(100%)] w-[calc(20%)] object-cover overflow-hidden rounded-2xl`}/>
                 </div>
 
                 <div className="w-screen flex flex-row gap-0.5">
-                    <img src="public/IEEE_Photo.jpg" alt="My Cat :)" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
+                    <img src="public/IEEE_Photo.jpg" alt="My Cat :)" className={`block h-[calc(100%)] w-[calc(20%)] object-cover overflow-hidden rounded-2xl`}/>
                     <div className="cardCanvas bg-blue-300/90 w-full flex flex-col items-center">
                         <h1 className="text-4xl text-white cardCanvas card-hover rounded-xl text-center h-fit w-[calc(90%-1rem)]">
                             Learn About IEEE
@@ -34,11 +34,11 @@ export const AboutMe = ({onClose}) => {
                             {`${AboutMe2}`}
                         </p>
                     </div>
-                    <img src="public/Trunks.jpg" alt="Wolak Learning Center" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
+                    <img src="public/Trunks.jpg" alt="Wolak Learning Center" className={`block h-[calc(100%)] w-[calc(20%)] object-cover overflow-hidden rounded-2xl`}/>
                 </div>
 
                 <div className="w-screen flex flex-row gap-0.5">
-                    <img src="public/ServerRack.jpg" alt="My Cat :)" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
+                    <img src="public/ServerRack.jpg" alt="My Cat :)" className={`block h-[calc(100%)] w-[calc(20%)] object-cover overflow-hidden rounded-2xl`}/>
                     <div className="cardCanvas bg-red-300/90 w-full flex flex-col items-center">
                         <h1 className="text-4xl text-white cardCanvas card-hover rounded-xl text-center h-fit w-[calc(90%-1rem)]">
                             Learn About My Server Specs
@@ -47,11 +47,11 @@ export const AboutMe = ({onClose}) => {
                             {`${AboutMe3}`}
                         </p>
                     </div>
-                    <img src="public/Robot_Drawing.jpg" alt="Wolak Learning Center" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
+                    <img src="public/Robot_Drawing.jpg" alt="Wolak Learning Center" className={`block h-[calc(100%)] w-[calc(20%)] object-cover overflow-hidden rounded-2xl`}/>
                 </div>
 
                 <div className="w-screen flex flex-row gap-0.5">
-                    <img src="public/OkemoTrip.jpg" alt="My Cat :)" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
+                    <img src="public/OkemoTrip.jpg" alt="My Cat :)" className={`block h-[calc(100%)] w-[calc(20%)] object-cover overflow-hidden rounded-2xl`}/>
                     <div className="cardCanvas bg-green-300/90 w-full flex flex-col items-center">
                         <h1 className="text-4xl text-white cardCanvas card-hover rounded-xl text-center h-fit w-[calc(90%-1rem)]">
                             TBD
@@ -60,7 +60,7 @@ export const AboutMe = ({onClose}) => {
                             {`${AboutMe4}`}
                         </p>
                     </div>
-                    <img src="public/CleanDesk.jpg" alt="Wolak Learning Center" className={`block h-${maxHeight} w-${maxWidth}  overflow-hidden rounded-2xl`}/>
+                    <img src="public/CleanDesk.jpg" alt="Wolak Learning Center" className={`block h-[calc(100%)] w-[calc(20%)]  overflow-hidden rounded-2xl`}/>
                 </div>
             
             

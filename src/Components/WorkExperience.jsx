@@ -12,13 +12,15 @@ function JobRequirementPrinter( {JobRequirement = [""]} ) {
 function WorkExperienceGenerator() {
     return (
         workExperienceData.map( (work) =>
-            <div className={`flex flex-col items-center gap-2 cardCanvas bg-card/50 mt-6 w-${maxWidth}`}>
-                <button key={work.name} className="cardCanvas card-hover text-3xl w-[calc(95%-1rem)] mt-1">
+            <div className={`flex flex-col items-center gap-2 cardCanvas bg-card/50 mt-6 w-[calc(60%)]`}>
+                <button key={work.name} className="cardCanvas card-hover text-3xl w-[calc(95%-1rem)] mt-1 mb-2">
                     {work.name}
                 </button>
                 <div>
-                    <h className="text-4xl">{work.JobTitle}</h>
-                    <h1 className="text-3xl">Requirements:</h1>
+                    <h className="text-3xl cardCanvas bg-blue-400 rounded-2xl">{work.JobTitle}</h>
+                    <div className="mt-2">
+                        <h1 className="text-3xl">Requirements:</h1>
+                    </div>
                     <div>
                         <JobRequirementPrinter JobRequirement={work.JobRequirements}/>
                     </div>

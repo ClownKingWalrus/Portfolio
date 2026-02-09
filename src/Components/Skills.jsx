@@ -17,11 +17,11 @@ function SkillCardsGenerator({category = ""}) {
 
 function CreateSkills() {
     return categories.map((category, key) => (
-        <div key={key} className="flex flex-col mt-6 items-center">
-            <button className={`cardCanvas card-hover rounded-xl mt-8  w-${maxWidth}`}>
+        <div key={key} className="flex flex-col mt-6 items-center w-[calc(60%)]">
+            <button className={`cardCanvas card-hover rounded-xl mt-8  w-[calc(95%)]`}>
                 {category}
             </button>
-            <div className={`flex flex-wrap gap-4 w-${maxWidth}`}>
+            <div className={`flex flex-wrap gap-4 w-[calc(95%)]`}>
                 <SkillCardsGenerator category={category}/>
             </div>
         </div>
@@ -34,9 +34,6 @@ export const Skills = ({onClose}) => {
             <button onClick={onClose} className="px-15 py-4 rounded-xl bg-blue-600 text-black shadow-xl">
                 CLOSER
             </button>
-                {/* <h1 className="text-4xl text-white cardCanvas card-hover rounded-xl">
-                Technical Skills
-                </h1> */}
              {/* Forces all objects center of the screen inside here */}
             <div className="scrollable-container">
                 <div className="w-screen text-xl flex flex-col mt-2 pb-24 items-center">
