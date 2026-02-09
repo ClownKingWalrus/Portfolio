@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+
+@theme {
+  /* This will ensure we can call our custom colors from root and .dark in code*/
+  --color-background: rgb(var(--background));
+  --color-border: rgb(var(--border));
+
+  --color-card: rgb(var(--card));
+  --color-card-hover: rgb(var(--card-hover));
+
+  --color-primary: rgb(var(--text-primary));
+  --color-secondary: rgb(var(--text-secondary));
+  /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+
+
+}
+
+/* Limit screen width TODO*/
+/* @media screen {
+  
+} */
+
+
+/*Themes -important to only drop the base 3 colors and not convert them before hand*/
+:root {  /* just the light theme/base theme*/
+  --background: 255, 255, 255; /* White */
+  --border: 50, 50, 50; /* this is used as a thin border around blocks of items*/
+
+  --card: 19, 255, 66; /* This is essentialy a background for blocks of items -light nature green*/
+  --card-hover: 102, 255, 213; /* hover color for card -light sky blue*/
+
+  --text-primary: 255, 0, 0; /* Black text */
+  --text-secondary: 255, 163, 58; /* light orange */
+
+}
+
+.dark {
+  --background: 0, 0, 0; /* Black */
+  --border: 255, 163, 58; /* this is used as a thin border around blocks of items*/
+
+  --card: 232, 29, 29; /* This is essentialy a background for blocks of items -red*/
+  --card-hover: 252, 68, 105; /* hover color for card -light pink red*/
+
+  --text-primary: 255, 255, 255; /* white text */
+  --text-secondary: 255, 185, 33; /* light orange */
+}
+
+@utility text-glow {
+  @apply relative;
+  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+}
+
+@utility card-hover {
+  @apply transition-transform duration-300 hover:scale-105 hover:shadow-lg;
+}
+
+@utility customGradient {
+  @apply bg-linear-to-r from-[rgb(var(--text-primary))] to-[rgb(var(--text-secondary))] /*required to clip here*/
+  bg-clip-text /*required to clip here*/
+  text-transparent; /*required to be transparent for linear gradient*/
+}
+
+@utility cosmic-button {
+  @apply px-6 py-2 rounded-full bg-primary text-primary font-medium
+  transition-all duration-300 hover:shadow-[rgb(255,255,0)]
+  hover:scale-110 active:scale-100
+}
+
+@utility cardCanvas {
+  @apply bg-[rgb(var(--card))] rounded-4xl overflow-hidden shadow-xl px-4 py-2;
+}
+
+@utility scrollable-container {
+  @apply overflow-y-auto
+}
