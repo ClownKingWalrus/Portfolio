@@ -12,38 +12,54 @@ export const skills = [
     { name: "CSS", useFrequency: "rarely", category: "frontend" },
     { name: "React", useFrequency: "rarely", category: "frontend" },
     { name: "Tailwind", useFrequency: "rarely", category: "frontend" },
+    { name: "JavaScript", useFrequency: "rarely", category: "frontend" },
+    { name: "JSX", useFrequency: "rarely", category: "frontend" },
+    { name: "Vite", useFrequency: "rarely", category: "frontend" },
 
     //Tools
     { name: "Bash", useFrequency: "sometimes", category: "tools" },
     { name: "Git", useFrequency: "often", category: "tools" },
+    { name: "GitHub", useFrequency: "often", category: "tools" },
+    { name: "GitLab", useFrequency: "rarely", category: "tools" },
     { name: "CMake", useFrequency: "sometimes", category: "tools" },
     { name: "Make", useFrequency: "sometimes", category: "tools" },
     { name: "Qt / QtCreator", useFrequency: "often", category: "tools" },
     { name: "WinForms", useFrequency: "rarely", category: "tools" },
     { name: "Arduino", useFrequency: "sometimes", category: "tools" },
-    { name: "C++ Connector", useFrequency: "sometimes", category: "tools" },
-    { name: "React-Three", useFrequency: "sometimes", category: "tools" },
-    { name: "Json", useFrequency: "sometimes", category: "tools" },
+    { name: "MySQL Connector/C++", useFrequency: "sometimes", category: "tools" },
+    { name: "React Three Fiber", useFrequency: "sometimes", category: "tools" },
+    { name: "JSON", useFrequency: "sometimes", category: "tools" },
+    { name: "Unreal", useFrequency: "sometimes", category: "tools" },
 
     //Data Structures im familar with
-    { name: "AStar", useFrequency: "rarely", category: "datastructures" },
-    { name: "DFS", useFrequency: "rarely", category: "datastructures" },
-    { name: "BFS", useFrequency: "rarely", category: "datastructures" },
+    { name: "Stacks", useFrequency: "sometimes", category: "datastructures" },
+    { name: "Queues", useFrequency: "rarely", category: "datastructures" },
+    { name: "Priority Queue", useFrequency: "rarely", category: "datastructures" },
+    { name: "Hash Maps", useFrequency: "rarely", category: "datastructures" },
     { name: "LinkedList", useFrequency: "sometimes", category: "datastructures" },
-    { name: "BinaryTrees", useFrequency: "rarely", category: "datastructures" },
-    
+    { name: "Binary Trees", useFrequency: "rarely", category: "datastructures" },
+
+    //Algorithims
+    { name: "A* Search", useFrequency: "rarely", category: "algorithims" },
+    { name: "DFS", useFrequency: "rarely", category: "algorithims" },
+    { name: "BFS", useFrequency: "rarely", category: "algorithims" },
 
     //OS
     { name: "Windows", useFrequency: "often", category: "platforms" },
     { name: "Linux", useFrequency: "sometimes", category: "platforms" },
-    { name: "Ubuntu-24.04", useFrequency: "sometimes", category: "platforms" },
-    { name: "RedHat", useFrequency: "sometimes", category: "platforms" },
+    { name: "Ubuntu 24.04", useFrequency: "sometimes", category: "platforms" },
+    { name: "Red Hat Linux", useFrequency: "sometimes", category: "platforms" },
 
     //Soft skills
     { name: "Interpersonal Communication", useFrequency: "often", category: "softskills" },
     { name: "Problem Solving", useFrequency: "often", category: "softskills" },
+    { name: "Critical Thinking", useFrequency: "sometimes", category: "softskills" },
     { name: "Teamwork", useFrequency: "often", category: "softskills" },
-    { name: "Scheduling", useFrequency: "often", category: "softskills" },
+    { name: "Empathy", useFrequency: "often", category: "softskills" },
+    { name: "Time Management", useFrequency: "often", category: "softskills" },
+    { name: "Accountability", useFrequency: "often", category: "softskills" },
+    { name: "Patience & Persistence", useFrequency: "often", category: "softskills" },
+    { name: "Learning New Tools", useFrequency: "sometimes", category: "softskills" },
 ];
 
 export const freqOrder= {
@@ -57,7 +73,9 @@ export const categoryOrder= {
     frontend: 1, 
     tools: 2,
     datastructures: 3,
-    platforms: 4
+    algorithims: 4,
+    platforms: 5,
+    softskills: 6
 };
 
 export const freqClass = {
@@ -72,7 +90,7 @@ export const freqClassNotOpaq = {
     rarely: "bg-orange-500/60 text-orange-200 ring-1 ring-orange-400/95",
 };
 
-export const categories = ["backend", "frontend", "tools", "platforms"];
+export const categories = ["backend", "frontend", "tools", "platforms", "softskills"];
 
 export const projects = [
     {name: "Paxel", Skills: ["Qt / QtCreator", "Git", "C++ Connector", "C++", "Bash", "CMake", "SQL"],
@@ -149,7 +167,15 @@ export const workExperienceData = [
         Skills: ["Soft Skills"],
         JobTitle: "11B",
         JobRequirements: [
-            "Exist"
+            "Meet eligibility requirements for enlistment in the U.S. Army (age, citizenship/legal status, background screening)",
+            "Qualify for Infantry MOS (11B) through ASVAB and medical screening (MEPS)",
+            "Complete Basic Combat Training (BCT) and Infantry One Station Unit Training (OSUT) at Fort Moore, GA",
+            "Maintain physical fitness standards (ACFT) and height/weight requirements",
+            "Demonstrate discipline, teamwork, and ability to perform under high-stress conditions",
+            "Train in individual and small-unit tactics, land navigation, and weapons handling",
+            "Follow safety procedures and maintain accountability of sensitive equipment",
+            "Ability to deploy and operate in field environments for extended periods",
+            "Security Clearance: Not required for initial entry (varies by assignment)"
         ],
         Status: "Completed",
         Time: "4 Years 6 months"
@@ -158,14 +184,55 @@ export const workExperienceData = [
     {
         name: "US National Guard", 
         Skills: ["Soft Skills"],
-        JobTitle: "11B",
+        JobTitle: "11B Team leader",
         JobRequirements: [
-            "Exist"
+            "Meet eligibility requirements for enlistment in the Army National Guard (age, citizenship/legal status, background screening)",
+            "Qualify for Infantry MOS (11B) through ASVAB and medical screening (MEPS)",
+            "Complete Basic Combat Training (BCT) and Infantry One Station Unit Training (OSUT) at Fort Moore, GA",
+            "Maintain readiness standards including ACFT, medical/dental readiness, and annual training requirements",
+            "Participate in monthly drill weekends and annual training cycles",
+            "Demonstrate reliability, teamwork, leadership, and strong communication in a unit environment",
+            "Train in small-unit tactics, weapons qualification, field operations, and mission readiness tasks",
+            "Ability to support state missions (emergency response) and federal mobilization if required",
+            "Security Clearance: Not required for initial entry (varies by unit/mission)"
         ],
         Status: "Ongoing",
         Time: "2 Years"
     },
 ];
+
+export const AboutMe1=
+`
+Hello, First I would like to thank you for taking the time to view my portfolio. The cat you see on the left here is named Gizmo and trust me I can also see him plotting our demise.
+My name is Trunks and yes it is my real name, I'm an avid computer science student currently in my sophomore year progressing through school learning new concepts
+
+`;
+export const AboutMe2=
+`
+While I have enjoyed my time at SNHU, seeing the level at which the school currently conducts it's Computer Science degree has inspired me to join the IEEE club.
+In the IEEE clubs members are motivated in their offtime to learn extra computer science concepts either through study or doing personal projects
+Being apart of the IEEE club has also granted us a students some power to motivate other students through events and club meetings
+Some of the events we have planned is a Git tutorial hosted by myself, having IEEE young profesionals and potentially tech recruiters hold mock interviews and much more.
+I do enjoy almost all faceits of computer science be it Frontend which im learning with this or be it Backend and algorithims other peoples projects motivate me to work harder.
+see if you can find me on the left image using the right as context
+`;
+export const AboutMe3=
+`
+Some of my other interest besides programming or sometimes it feels like brogramming is messing around with server stuff, infact on the left here is my server on this rack.
+Some things some might not consider like myself is the electrcity cost of running a enterprise server my Dell-R730 and MD1400 with 10 3TB hardrives cost around $3 a day to run.
+However if I could reccomend anything to fellow CS enjoyers is to get a server as the amount of knowledge gained by owning one and using it will surely benfit them I hope.
+Another hobby i avidly enjoyed was drawing infact the image on the right is a reference drawing of a image online I saw, Drawing taught me that with hard work comes results.
+`;
+
+export const AboutMe4=
+`
+I also enjoy Skiing and Snowboarding albeit I'm a noob in learning on the second one, this picture was from a trip to okemo I went on with some friends.
+Of course this dosen't just extend to winter trips but I also enjoy hiking many peaks, here hoping to hit the appalachine this summer for about a week.
+Another faceit of mine is attempting to be relativly neat I defintly take some pride in my desk setup albeit a bit bare it gets the job done.
+
+`;
+
+
 
 // export const freqLabel = {  
 //     often: "Often",

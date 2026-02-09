@@ -42,7 +42,7 @@ export const Projects = ({onClose}) => {
             </button>
             {/* Put projects below */}
             <div className="h-screen overflow-y-auto">
-                <div className="w-screen text-xl flex flex-col mt-2 pb-12 items-center">
+                <div className="w-screen text-xl flex flex-col mt-2 pb-24 items-center">
                     {ProjectGenerator()}
                     
                 </div>

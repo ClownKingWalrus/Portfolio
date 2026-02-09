@@ -72,5 +72,5 @@
 }
 
 @utility scrollable-container {
-  @apply overflow-y-auto
+  @apply h-screen overflow-y-auto
 }

@@ -1,10 +1,68 @@
+import { AboutMe1, AboutMe2, AboutMe3, AboutMe4 } from "./Data"
+const maxWidth=100
+const maxHeight=100
 export const AboutMe = ({onClose}) => {
     return (
         <div className="fixed inset-0 bg-black opacity-99 z-2">
             <button onClick={onClose} className="px-15 py-4 rounded-xl bg-pink-400 text-black shadow-xl">
                 CLOSER
             </button>
-            <p>WORDSWORDSWORDSWORDS</p>
+            <div className="scrollable-container flex flex-col gap-5 pb-24">
+
+                <div className="w-screen flex flex-row gap-0.5">
+                    <img src="public/AztecGizmo.jpg" alt="My Cat :)" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
+                    <div className="cardCanvas bg-amber-300/90 w-full flex flex-col items-center">
+                        <h1 className={`text-4xl text-white cardCanvas card-hover rounded-xl text-center h-fit w-[calc(90%-1rem)]`}>
+                            About Me
+                        </h1>
+                        <p className="text-2xl whitespace-pre-line">
+                            {`${AboutMe1}`}
+                        </p>
+                    </div>
+                    <img src="public/SNHU-LearningCenter.webp" alt="My Cat :)" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
+                </div>
+
+                <div className="w-screen flex flex-row gap-0.5">
+                    <img src="public/IEEE_Photo.jpg" alt="My Cat :)" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
+                    <div className="cardCanvas bg-blue-300/90 w-full flex flex-col items-center">
+                        <h1 className="text-4xl text-white cardCanvas card-hover rounded-xl text-center h-fit w-[calc(90%-1rem)]">
+                            Learn About IEEE
+                        </h1>
+                        <p className="text-2xl whitespace-pre-line">
+                            {`${AboutMe2}`}
+                        </p>
+                    </div>
+                    <img src="public/Trunks.jpg" alt="Wolak Learning Center" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
+                </div>
+
+                <div className="w-screen flex flex-row gap-0.5">
+                    <img src="public/ServerRack.jpg" alt="My Cat :)" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
+                    <div className="cardCanvas bg-red-300/90 w-full flex flex-col items-center">
+                        <h1 className="text-4xl text-white cardCanvas card-hover rounded-xl text-center h-fit w-[calc(90%-1rem)]">
+                            Learn About My Server Specs
+                        </h1>
+                        <p className="text-2xl whitespace-pre-line">
+                            {`${AboutMe3}`}
+                        </p>
+                    </div>
+                    <img src="public/Robot_Drawing.jpg" alt="Wolak Learning Center" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
+                </div>
+
+                <div className="w-screen flex flex-row gap-0.5">
+                    <img src="public/OkemoTrip.jpg" alt="My Cat :)" className={`block h-${maxHeight} w-${maxWidth} object-cover overflow-hidden rounded-2xl`}/>
+                    <div className="cardCanvas bg-green-300/90 w-full flex flex-col items-center">
+                        <h1 className="text-4xl text-white cardCanvas card-hover rounded-xl text-center h-fit w-[calc(90%-1rem)]">
+                            TBD
+                        </h1>
+                        <p className="text-2xl whitespace-pre-line">
+                            {`${AboutMe4}`}
+                        </p>
+                    </div>
+                    <img src="public/CleanDesk.jpg" alt="Wolak Learning Center" className={`block h-${maxHeight} w-${maxWidth}  overflow-hidden rounded-2xl`}/>
+                </div>
+            
+            
+            </div>
         </div>
     )
 }
