@@ -7,12 +7,12 @@ function Bubble({register, lookAtBubbleName, position, radius = 0.18, color = "r
     //console.log("Bubble Function");
     return (
     <mesh 
-    position={position} 
-    name={name} 
-    scale={scale}
-    lookAtBubbleName={lookAtBubbleName}
-    ref={register(name)}          
-    onClick={onBubbleClick ? (e) => onBubbleClick(e.object, bubbleRefs.current[lookAtBubbleName]) : undefined}
+      position={position} 
+      name={name} 
+      scale={scale}
+      lookAtBubbleName={lookAtBubbleName}
+      ref={register(name)}          
+      onClick={onBubbleClick ? (e) => onBubbleClick(e.object, bubbleRefs.current[lookAtBubbleName]) : undefined}
     >
       <sphereGeometry args={[radius, 24, 24]} />
       <meshStandardMaterial color={color} metalness={metalness} roughness={roughness} />
