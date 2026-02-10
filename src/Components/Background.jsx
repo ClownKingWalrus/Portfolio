@@ -44,7 +44,7 @@ export const Background = () => {
   }, [camera, activeBubble, LookAtBubble, target]);
 
   useFrame((state) => {
-    const maxOffSet = 0.7;
+    const maxOffSet = 0.1;
     const x = state.pointer.x * maxOffSet;
     const y = state.pointer.y * maxOffSet;
 
