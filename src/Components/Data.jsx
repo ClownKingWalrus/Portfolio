@@ -94,37 +94,130 @@ export const categories = ["backend", "frontend", "tools", "platforms", "softski
 
 export const projects = [
     {name: "Paxel", Skills: ["Qt / QtCreator", "Git", "MySQL Connector/C++", "C++", "Bash", "CMake", "SQL", "Interpersonal Communication", "Problem Solving", "Teamwork", "Learning New Tools"],
-        projectDescription: "A reddit inspired casual board discussion app for college students"},
+        projectDescription: "A reddit inspired casual board discussion app for college students",
+        projectFeature: [
+                    "24/7 live SQL backend",
+                    "User authentication & account system",
+                    "Customizable user profiles",
+                    "Follow system & follower tracking",
+                    "Create boards & reply to threads",
+                    "Nested reply threads",
+                    "Like system for posts & comments"
+                    ],
+        Photos: ["Paxal_HomePage.jpg", "Paxal_HomeScreen.jpg", "Paxal_SignUp.jpg"],
+        Videos: [{src:"ArduinoAlien.webm", thumb: "ArduinoAlien.Thumbnail"}],
+    },
 
     {name: "Sokoban Algorithims", Skills: ["C++", "A* Search", "BFS", "DFS", "LinkedList", "Critical Thinking", "Problem Solving"],
-        projectDescription: "Based on Sokoban, this project uses algorithims like bfs, dfs, astar to solve the game and return the map states it took"},
+        projectDescription: "Based on Sokoban, this project uses algorithims like bfs, dfs, astar to solve the game and return the map states it took",
+        projectFeature: [
+                        "Multiple Algorithims",
+                        "Custom Map Solving",
+                        "Statstics",
+                        "Map States to Destination"
+                        ],
+        Photos: ["Sokoban-Terminal.jpg", "Sokoban-Steps.jpg", "Sokoban-completion.jpg"],
+        Videos: [{src:null, thumb: null}],
+    },
 
     {name: "Website Portfolio", Skills: ["JSON", "Node.js (Express)", "HTML", "CSS", "React", "Tailwind", "Git", "React Three Fiber", "Learning New Tools"],
-        projectDescription: "This project is meant to allow a wider audience to see my skills and learn about me"},
+        projectDescription: "This project is meant to allow a wider audience to see my skills and learn about me",
+        projectFeature: [
+                        "Learn a little about myself",
+                        "Hopefully 3D enviroment",
+                        "Experimentation"
+                        ],
+        Photos: ["Website-MainView.jpg", "Website-Skills.jpg", "Website-Projects.jpg"],
+        Videos: [{src:null, thumb: null}],
+    },
 
     {name: "Food Crawler", Skills: ["WinForms", "C#", "Interpersonal Communication", "Problem Solving", "Empathy", "Patience & Persistence"],
-        projectDescription: "A School group project where you go through a ever expanding dungeon with different enemies and music based on current fight to level up and defeat the boss"},
+        projectDescription: "A School group project where you go through a ever expanding dungeon with different enemies and music based on current fight to level up and defeat the boss",
+        projectFeature: [
+                        "Custom Music Selection",
+                        "Level ups",
+                        "Shops",
+                        "Various Enemies"
+                        ],
+        Photos: ["FoodCrawler-Persona.jpg", "FoodCrawler-Upgrades.jpg", "FoodCrawler-Goblin.jpg"],
+        Videos: [{src:null, thumb: null}],
+    },
 
     {name: "VS Code Utils", Skills: ["VSCode", "Make", "Bash"],
-        projectDescription: "This project allows me to build C# pointing the build bin to the visual studios compiler to be able to use runtime DLLS and also build C++ projects on VS code rather than an IDE", },
+        projectDescription: "This project allows me to build C# pointing the build bin to the visual studios compiler to be able to use runtime DLLS and also build C++ projects on VS code rather than an IDE",
+        projectFeature: [
+                        "Build C++ applications",
+                        "Supports MSVC runtime DLLS",
+                        ".cpp and .h Worflow Ready"
+                        ],
+        Photos: ["VSCodeUtils-BAT.jpg", "VSCodeUtils-SH.jpg"],
+        Videos: [{src:null, thumb: null}],
+    },
+
+    {name: "Binary Tree + AVL", Skills: ["VSCode", "C++"],
+        projectDescription: "This project was done out of a lack of comprehending truley how to make a binary tree with the AVL algorithim, doing this project allowed me to fully comprehend on a deeper level how the system worked",
+        projectFeature: [
+                        "Working Binarary Tree with AVL sorting algorithim"
+                        ],
+        Photos: ["BinaryTrees-Case1.jpg", "BinaryTrees-Case2.jpg", "BinaryTrees-Ins.jpg"],
+        Videos: [{src:null, thumb: null}],
+    },
 
     {name: "C Sharp TicTacToe", Skills: ["WinForms", "C#"], 
-        projectDescription: "This project was a Graphical User Interface version of TicTacToe"},
+        projectDescription: "This project was a Graphical User Interface version of TicTacToe",
+        projectFeature: [
+                        "Non optimal bot",
+                        "Win Counter"
+                        ],
+        Photos: ["CTicTacToe-1.jpg", "CTicTacToe-2.jpg", "CTicTacToe-3.jpg"],
+        Videos: [{src:null, thumb: null}],
+    },
 
     {name: "Arduino Weather Station", Skills: ["Arduino"], 
-        projectDescription: "This project was my final in Eng 110 which uses a greedy cup cup that fills up and every 10 seconds it calculates rainfall per minutes"},
+        projectDescription: "This project was my final in Eng 110 which uses a greedy cup cup that fills up and every 10 seconds it calculates rainfall per minutes",
+        projectFeature: [
+                        "Durable enough to survive my car getting blown off the curb",
+                        "Also estimated Rain per hour"
+                        ],
+        Photos: ["ArduinoWeather-Full.jpg", "ArduinoWeather-Survivor.jpg", "ArduinoWeather-CarCrash.jpg"],
+        Videos: [{src:null, thumb: null}],              
+    },
 
     {name: "Arduino IR Communication Towers", Skills: ["Arduino"], 
-        projectDescription: "This project would rotate the arduino towers until it found a signal then turn until the signal was clear and then the two towers could communicate via keyboard typing to eachother"},
+        projectDescription: "This project would rotate the arduino towers until it found a signal then turn until the signal was clear and then the two towers could communicate via keyboard typing to eachother",
+        projectFeature: [
+                        "Wireless communication",
+                        ],
+        Photos: ["ArduinoAlien-1.jpg", "ArduinoAlien-2.jpg"],
+        Videos: [{src: "ArduinoAlien.webm", thumb: "ArduinoAlien-Thumbnail.jpg"}],
+    },
 
     {name: "Arduino Solar Battery", Skills: ["Arduino", "Python"], 
-        projectDescription: "This project would rotate the arduino towers until it found a signal then turn until the signal was clear and then the two towers could communicate via keyboard typing to eachother"},
+        projectDescription: "This project would rotate the arduino towers until it found a signal then turn until the signal was clear and then the two towers could communicate via keyboard typing to eachother",
+        projectFeature: [
+                    
+                        ],
+        Photos: [null],
+        Videos: [{src:null, thumb: null}],
+    },
 
     {name: "Json Array String Check Wiper", Skills: ["C++", "JSON"], 
-        projectDescription: "This project which mainly is used for minecraft crafting json takes a input string and wipe anything that does not pass and also a KV pair checker which also wipes non passes from the file"},
+        projectDescription: "This project which mainly is used for minecraft crafting json takes a input string and wipe anything that does not pass and also a KV pair checker which also wipes non passes from the file",
+        projectFeature: [
+                    
+                        ],
+        Photos: [null],
+        Videos: [{src:null, thumb: null}],
+    },
 
     {name: "Black Jack", Skills: ["C++"],
-        projectDescription: "Play some terminal Black Jack"},
+        projectDescription: "Play some terminal Black Jack",
+        projectFeature: [
+                    
+                        ],
+        Photos: [null],
+        Videos: [{src:null, thumb: null}],
+    },
 
     // {name: "", Skills: [],
     //     projectDescription: ""},
