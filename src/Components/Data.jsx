@@ -105,7 +105,7 @@ export const projects = [
                     "Like system for posts & comments"
                     ],
         Photos: ["Paxal_HomePage.jpg", "Paxal_HomeScreen.jpg", "Paxal_SignUp.jpg"],
-        Videos: [{src:"ArduinoAlien.webm", thumb: "ArduinoAlien.Thumbnail"}],
+        Videos: [{src:null, thumb: null}],
     },
 
     {name: "Sokoban Algorithims", Skills: ["C++", "A* Search", "BFS", "DFS", "LinkedList", "Critical Thinking", "Problem Solving"],
@@ -193,12 +193,12 @@ export const projects = [
     },
 
     {name: "Arduino Solar Battery", Skills: ["Arduino", "Python"], 
-        projectDescription: "This project would rotate the arduino towers until it found a signal then turn until the signal was clear and then the two towers could communicate via keyboard typing to eachother",
+        projectDescription: "This Arduino project would have a images of mars getting progressivly worse based on the battery with music to accompany",
         projectFeature: [
-                    
+                        "Reactive script intergration"
                         ],
-        Photos: [null],
-        Videos: [{src:null, thumb: null}],
+        Photos: ["ArduinoSolar-1.jpg"],
+        Videos: [{src:"ArduinoSolar-2.webm", thumb: "ArduinoSolar-2-Thumbnail.jpg"}],
     },
 
     {name: "Json Array String Check Wiper", Skills: ["C++", "JSON"], 
@@ -206,16 +206,7 @@ export const projects = [
         projectFeature: [
                     
                         ],
-        Photos: [null],
-        Videos: [{src:null, thumb: null}],
-    },
-
-    {name: "Black Jack", Skills: ["C++"],
-        projectDescription: "Play some terminal Black Jack",
-        projectFeature: [
-                    
-                        ],
-        Photos: [null],
+        Photos: ["JsonArrayWiper-1.jpg", "JsonArrayWiper-2.jpg"],
         Videos: [{src:null, thumb: null}],
     },
 

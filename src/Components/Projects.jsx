@@ -1,19 +1,20 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { skills, freqClassNotOpaq, freqOrder, categoryOrder, projects } from "../Components/Data";
 
 export const Projects = ({onClose}) => {
 const [openProject, setOpenProject] = useState(null);
 const [openVideo, setOpenVideo] = useState(null);
+const [openImage, setOpenImage] = useState(null);
 
 function ExpandProject(project) {
     setOpenProject((prev) => (prev === project.name ? null : project.name));
+
 }
 
 function ProjectGenerator() {
     return (
         projects.map((projects) =>
-        <div key={projects.name} className={`flex flex-col items-center cardCanvas bg-card/50 mt-6 w-full 
-        transition-all duration-500 ease-in-out
+        <div key={projects.name} className={`flex flex-col items-center cardCanvas bg-card/50 mt-6 w-full transition-all duration-500 ease-in-out
         ${openProject === projects.name ? "max-h-full opacity-100 mt-4" : "max-h-16 opacity-100"}`}>{/*currently max-h-x needs to be set as animating doesent work on auto properties like h-fit/full*/}
             <button onClick={() => ExpandProject(projects)} className="card-hover bg-blue-500 rounded-4xl px-4 py-2 w-[calc(70%)]">
                 {projects.name}
@@ -26,7 +27,7 @@ function ProjectGenerator() {
                         {projects.projectDescription}
                     </p>
                     <div className="flex flex-wrap justify-center gap-2 mt-4">
-                        <ImageCards imageArr={projects.Photos}/>
+                        <ImageCards imageArr={projects.Photos} onOpen={setOpenImage}/>
                         <VideoCard vidArr={projects.Videos} onOpen={setOpenVideo}/>
                     </div>
                     <div className="flex flex-wrap justify-center gap-2 mt-4">
@@ -89,10 +90,10 @@ function VideoCard({vidArr = [], onOpen}) {
     }
 }
 
-function ImageCards({imageArr = []}) {
+function ImageCards({imageArr = [], onOpen}) {
     return (
         imageArr.map((item) =>
-            <img key={item} src={`${item}`} alt="Nothing Yet" className={`block h-100 w-[calc(30%)] object-cover overflow-hidden rounded-2xl`}/>
+            <img key={item} src={`${item}`} alt="Nothing Yet" className={`block h-100 w-[calc(30%)] object-cover overflow-hidden rounded-2xl transition-all duration-300 hover:scale-102`} onClick={() => onOpen(item)}/>
         )
     );
 }
@@ -114,28 +115,42 @@ function FeatureCards({featureArr = []}) {
             <button onClick={onClose} className="px-15 py-4 rounded-xl bg-red-600 text-black shadow-xl">
                 CLOSER
             </button>
-            {/* Put projects below */}
-            <div className="h-screen overflow-y-auto flex flex-col items-center">
-                <div className={`w-[calc(60%)] text-xl flex flex-col mt-2 pb-24 items-center gap-10`}>
+            
+            {/* Projects below */}
+            <div className="h-screen overflow-y-scroll flex flex-col items-center">
+                <div className={`w-[calc(60%)] text-xl flex flex-col mt-2 pb-40 items-center gap-10`}>
                     {ProjectGenerator()}
+                    <img src="ConstructionClipArt.jpg" alt="Under Construction" className={`w-[calc(100%)] transition-all duration-500 ease-in-out 
+                        ${openProject === null ? "h-200 opacity-100" : "h-0 opacity-0"}`}/>
                 </div>
             </div>
+            
+            {/* Video Handler */}
             {openVideo && (
                 <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
                     <div className="relative w-[90%] max-w-4xl">
-                        <button
-                            onClick={() => setOpenVideo(null)}
-                            className="absolute -top-10 right-0 text-white text-xl"
-                        >
+                        <button onClick={() => setOpenVideo(null)} className="absolute -top-10 right-0 text-white text-xl bg-red-600 px-5 rounded">
                             CLOSE
                         </button>
-
                         <video controls autoPlay className="w-full rounded-xl">
                             <source src={openVideo} type="video/mp4" />
                         </video>
                     </div>
                 </div>
             )}
+            {/* Dim background and apply if openImage is null do stuff*/}
+            <div className={`fixed inset-0 bg-black/80 flex items-center justify-center z-50 transition-all duration-300
+                ${openImage ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
+                {/* size image */}
+                <div className="relative max-h-[calc(80%)] max-w-[calc(80%)] mb-40 mt-10">
+                    {/* closing button */}
+                    <button onClick={() => setOpenImage(null)} className="absolute -top-10 right-0 text-white text-xl bg-red-600 px-5 rounded">
+                        CLOSE
+                    </button>
+                    {/* the image */}
+                    <img src={openImage} className="w-full rounded-xl"/>
+                </div>
+            </div>
         </div>
     )
 }
